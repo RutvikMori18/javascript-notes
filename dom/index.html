@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Example Title</title>
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Example description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="icon" type="image/x-icon" href="" />
+    <style>
+        .menu-item {
+            background-color: black;
+            color: white;
+        }
+
+        .menu-item.active {
+            background-color: white;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <ul>
+            <li class="menu-item" onclick="menuClicked(this)">menu 1</li>
+            <li class="menu-item" onclick="menuClicked(this)">menu 2</li>
+            <li class="menu-item" onclick="menuClicked(this)">menu 3</li>
+            <li class="menu-item active" onclick="menuClicked(this)">menu 4</li>
+        </ul>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
