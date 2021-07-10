@@ -105,60 +105,99 @@
 //promises
 //they are objects that either return the successfully fetched data , or the error
 
-const fetchUser = ((username) => {
-    setTimeout(() => {
-        console.log("[now we have the username]");
 
-        resolve({
-            username
-        });
-
-    }, 2000);
-});
-
-
-const fetchUserphoto = (username) => {
-
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("[now we have the photos]");
-            resolve(['photos1', 'photos2']);
-        }, 2000);
-    });
-
-}
-
-const fetchUserphotodetails = (photo, ) => {
-
-    return new Promise(resolve, reject);
-    setTimeout(() => {
-        console.log(`[now we have the photos details ${photo}]`);
-        resolve('details...');
-    }, 2000);
-}
-
-
-//fetchUser.then((user) => {
-//    console.log(user.username);
-//});
-//fetchUser.catch((error) => {
-//    console.log(error);
-//})
-//NOT USING THIS =>CALLBACK
-//fetchUser('mori', (user) => {
-//    console.log(`youe name is : ${user.username}`);
+//aaya thi kay smajanu nathi..
+//const fetchUser = (username) => {
+//    return new Promise((resolve, reject) => {
+//        setTimeout(() => {
+//            console.log("[now we have the username]");
 //
-//    fetchUserphoto(user.username, (userphotos) => {
-//        console.log(`your photos are : ${userphotos}`);
+//            resolve({
+//                username
+//            });
 //
-//        fetchUserphotodetails(userphotos[0], (details) => {
-//            console.log(`your photos details are : ${details}`);
-//
-//
-//        });
+//        }, 1000);
 //    });
-//});
+//}
+//
+//const fetchUserphoto = (username) => {
+//
+//    return new Promise((resolve, reject) => {
+//        setTimeout(() => {
+//            console.log("[now we have the photos]");
+//            resolve(['photos1', 'photos2']);
+//        }, 2000);
+//    });
+//
+//}
+//
+//const fetchUserphotodetails = (photo) => {
+//
+//    return new Promise((resolve, reject) => {
+//        setTimeout(() => {
+//            console.log(`[now we have the photos details ${photo}]`);
+//            resolve('details...');
+//        }, 2000);
+//    })
+//}
+//
+//individual calling
+////fetchUser.then((user) => {
+////    console.log(user.username);
+////});
+////fetchUser.catch((error) => {
+////    console.log(error);
+////})
+////NOT USING THIS =>CALLBACK
+////fetchUser('mori', (user) => {
+////    console.log(`youe name is : ${user.username}`);
+////
+////    fetchUserphoto(user.username, (userphotos) => {
+////        console.log(`your photos are : ${userphotos}`);
+////
+////        fetchUserphotodetails(userphotos[0], (details) => {
+////            console.log(`your photos details are : ${details}`);
+////
+////
+////        });
+////    });
+////});
+// fetch using .then
+//fetchUser('mashin')
+//    .then((user) => fetchUserphoto(user.username))
+//    .then((photos) => fetchUserphotodetails(photo[0]))
+//    .then((details) => console.log(`your photo details are ${details}`))
 
-fetchUser("machin").then((user) => fetchUserphoto(user.username));
-fetchUser("machin").then((photos) => fetchUserphotodetails(photo[0]));
-fetchUser("machin").then((details) => console.log(`your photo details are ${details}`));
+//fetch using async and await function
+
+//const displayData = async () => {
+            //    const user = await fetchUser('MORI');
+            //    const photos = await fetchUserphoto(user.username);
+            //    const details = await fetchUserphotodetails(photos[0]);
+            //
+            //    console.log(details);
+            //}
+
+//ASYN FUNCTION RETURN PROMISES!!!
+
+//AWAIT AND ASYNC
+//ASYNC => AWAIT
+//const fetchNumber = async () => {
+//    return 55;
+//}
+
+//console.log(fetchNumber());
+
+
+//fetchNumber().then((number) => {
+//console.log(number);
+//})
+//console.log(number);
+//})
+
+//const fetchednumber = async () => {
+//    const number = await fetchednumber();
+//    console.log(number);
+//}
+//
+//fetchednumber();
